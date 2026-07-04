@@ -257,3 +257,32 @@ function propertyInfo(){
 ------------------------------*/
 
 console.log("Version 2 Ready");
+
+
+ /* ==========================================
+   Backward Compatibility
+========================================== */
+
+function openResearch(){
+    research();
+}
+
+function openCompanies(){
+    company();
+}
+
+function openProspects(){
+    prospects();
+}
+
+function openDashboard(){
+    dashboard();
+}
+
+function openSettings(){
+    settings();
+}
+
+function openComplete(){
+    location.href="index.html";
+}
