@@ -154,3 +154,28 @@ function(){
 );
 
 console.log("database.js loaded");
+
+
+           function saveProspect(){
+
+const prospect={
+
+company:document.getElementById("companyName").value,
+
+industry:document.getElementById("companyIndustry").value,
+
+location:document.getElementById("companyLocation").value,
+
+date:new Date().toLocaleDateString()
+
+};
+
+let prospects=JSON.parse(localStorage.getItem("prospects")) || [];
+
+prospects.push(prospect);
+
+localStorage.setItem("prospects",JSON.stringify(prospects));
+
+alert("Prospect Saved Successfully");
+
+}
