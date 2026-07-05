@@ -189,3 +189,33 @@ localStorage.setItem("prospects",JSON.stringify(prospects));
 alert("Prospect Saved Successfully");
 
 }
+
+
+
+function loadProspects(){
+
+let prospects =
+JSON.parse(localStorage.getItem("prospects")) || [];
+
+let body =
+document.getElementById("prospectBody");
+
+if(!body) return;
+
+body.innerHTML = "";
+
+prospects.forEach(function(p){
+
+body.innerHTML += `
+<tr>
+<td>${p.company}</td>
+<td>${p.industry}</td>
+<td>${p.location}</td>
+<td>${p.status}</td>
+<td>${p.date}</td>
+</tr>
+`;
+
+});
+
+}
