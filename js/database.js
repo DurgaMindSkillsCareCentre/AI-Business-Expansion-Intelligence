@@ -185,7 +185,7 @@ let prospects=JSON.parse(localStorage.getItem("prospects")) || [];
 prospects.push(prospect);
 
 localStorage.setItem("prospects",JSON.stringify(prospects));
-
+console.log(prospects);
 alert("Prospect Saved Successfully");
 
 }
